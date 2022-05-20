@@ -4,35 +4,15 @@ import { useDispatch, useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import { fetchSpaces } from "../../store/spaces/actions";
 import { selectSpaces } from "../../store/spaces/selectors";
-import Space from "../../components/Space";
 
-export default function Spaces() {
-  const dispatch = useDispatch();
-  const spaces = useSelector(selectSpaces);
-
-  useEffect(() => {
-    dispatch(fetchSpaces());
-  }, [dispatch]);
+export default function Spaces(props) {
 
   return (
     <>
-      {/* <Jumbotron>
-        <h1>Spaces</h1>
-      </Jumbotron> */}
       <Container>
-        {spaces.map((space) => {
-          return (
-            <Space
-              key={space.id}
-              id={space.id}
-              title={space.title}
-              description={space.description}
-              backgroundColor={space.backgroundColor}
-              color={space.color}
-              showLink={true}
-            />
-          );
-        })}
+        Test
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
       </Container>
     </>
   );

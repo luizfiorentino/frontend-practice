@@ -31,12 +31,12 @@ export default function HomePage() {
             return (
               <Space
                 key={space.id}
-                id={space.id}
+                // id={space.id}
                 title={space.title}
                 description={space.description}
-                backgroundColor={space.backgroundColor}
-                color={space.color}
-                showLink={true}
+                // backgroundColor={space.backgroundColor}
+                // color={space.color}
+                // showLink={true}
               />
             );
           })}
